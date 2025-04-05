@@ -1,0 +1,65 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.titulo {
+    animation: dancing 666ms infinite ease-in-out;
+    transform-origin: center center
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin: 100px;
+    padding-inline: 100px;
+    cursor: pointer;
+}
+
+.blocker {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    background-color: white;
+
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+
+@keyframes dancing {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(15deg); }
+    50%  { transform: rotate(0deg); }
+    75%  { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+

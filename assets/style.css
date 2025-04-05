@@ -1,0 +1,199 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.loading-dialog[open] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin: 0;
+
+    & h2 {
+        margin: 0;
+    }
+
+    animation: fadeInFromTop 1s forwards;
+}
+
+.loading-dialog[open]::backdrop {
+    background-color: transparent;
+}
+
+.error-dialog[open] {
+    background-color: red;
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 20px;
+    gap: 30px;
+    outline: none;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin: 0;
+
+    & h2 {
+        margin: 0;
+    }
+
+    animation: fadeInFromTop 1s forwards;
+}
+
+.error-dialog::backdrop {
+    background-color: transparent;
+}
+
+.loader {
+    height: 20px;
+    width: 20px;
+    border: 5px solid lightgrey;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: rotate 1s infinite;
+}
+
+.loading-dialog[open] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.password-dots {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-block: 40px;
+}
+
+.dot {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #d3d3d3;
+    border-radius: 50%;
+    outline: none;
+}
+
+.dot-active {
+    background-color: #df4545;
+    border-color: transparent;
+    box-shadow: 0px 0px 20px 0px #df4545;
+    outline: none;
+}
+
+.btns {
+    display: flex;
+    height: 100vh;
+    width: max-content;
+    padding-inline: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    gap: 10px;
+
+    & h3 {
+        margin: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    animation: fadeInFromTop 1s;
+}
+
+.password-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-senha {
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    padding: 17px;
+    background-color: #d3d3d3;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+
+.submit-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.btn-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #d3d3d3;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-senha:hover {
+    transform: translateY(-5px);
+}
+.btn-submit:hover {
+    transform: translateY(5px);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-360deg);
+    } to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fadeInFromTop {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    } to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senha de Acesso</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <dialog id="loadingDialog" class="loading-dialog">
+        <h2>trabalhando nisso...</h2>
+        <div class="loader"></div>
+    </dialog>
+
+    <dialog id="errorDialog" class="error-dialog">
+        <h2>senha inválida!</h2>
+    </dialog>
+
+    <section class="main">
+        <div class="btns">
+            <h3>digite a senha de acesso</h3>
+
+            <div class="password-dots">
+                <div class="dot" id="dot1"></div>
+                <div class="dot" id="dot2"></div>
+                <div class="dot" id="dot3"></div>
+                <div class="dot" id="dot4"></div>
+                <div class="dot" id="dot5"></div>
+                <div class="dot" id="dot6"></div>
+            </div>
+
+            <div class="password-btns">
+                <button class="btn-senha" id="btnSenha1" onclick="insereSenha([0, 9]); atualizaDots()">0 ou 9</button>
+                <button class="btn-senha" id="btnSenha2" onclick="insereSenha([1, 6]); atualizaDots()">1 ou 6</button>
+                <button class="btn-senha" id="btnSenha3" onclick="insereSenha([2, 4]); atualizaDots()">2 ou 4</button>
+                <button class="btn-senha" id="btnSenha4" onclick="insereSenha([3, 5]); atualizaDots()">3 ou 5</button>
+                <button class="btn-senha" id="btnSenha5" onclick="insereSenha([7, 8]); atualizaDots()">7 ou 8</button>
+            </div>
+        
+            <div class="submit-btns">
+                <button onclick="comparaSenha(); acesso()" class="btn-submit"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"><path d="m9.51 4.23 8.56 4.28c3.84 1.92 3.84 5.06 0 6.98l-8.56 4.28c-5.76 2.88-8.11.52-5.23-5.23l.87-1.73c.22-.44.22-1.17 0-1.61l-.87-1.74C1.4 3.71 3.76 1.35 9.51 4.23ZM5.44 12h5.4" stroke="#555555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+                <button onclick="delCaracter(); atualizaDots()" class="btn-submit"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"><path stroke="#555555" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 22h12M2.91 17.58l3.51 3.51a3 3 0 004.24 0l10.43-10.43a3 3 0 000-4.24l-3.51-3.51a3 3 0 00-4.24 0L2.91 13.34a3 3 0 000 4.24zM7.12 9.13l7.75 7.75M3.52 17.66L9.17 12M6.34 20.49L12 14.83"></path></svg></button>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/main.js"></script>
+</body>
+</html>
