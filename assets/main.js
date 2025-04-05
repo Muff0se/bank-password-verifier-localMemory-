@@ -57,7 +57,7 @@ async function acesso() {
         window.location.href = './acesso/acesso.html'
     } else {
         abrirDialog(errorDialog);
-        await esperar(5000);
+        await esperar(2000);
         fecharDialog(errorDialog);
         userSenha = [];
         atualizaDots();
